@@ -1,0 +1,50 @@
+<h1>
+    Location <small>Nombre del Location</small> </h1>
+<hr>
+
+
+<div class="row text-right">
+    <div class="col">
+        <button class="btn btn-danger" routerLink="/locations">
+      <i class="fa fa-arrow-left"></i>
+      Regresar
+    </button>
+    </div>
+</div>
+
+
+
+<div class="row animated fadeIn faster">
+    <div class="col">
+
+        <form (ngSubmit)="guardar( f )" #f="ngForm">
+
+
+            <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre de ubicación" [(ngModel)]="location.name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Area</label>
+                <input type="number" class="form-control" [(ngModel)]="location.areaM2" name="areaM2" placeholder="areaM2 de  ubicación">
+            </div>
+            <div class="form-group">
+                <label>Location</label>
+                <input type="number" class="form-control" [(ngModel)]="location.LocationId" name="LocationId" placeholder="LocationId de ubicación">
+            </div>
+
+            <hr>
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+            </div>
+
+
+        </form>
+
+
+    </div>
+</div>
